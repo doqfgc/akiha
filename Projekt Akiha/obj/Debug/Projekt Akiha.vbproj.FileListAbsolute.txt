@@ -1,0 +1,12 @@
+c:\users\setsuna\documents\visual studio 2015\Projects\Projekt Akiha\Projekt Akiha\bin\Debug\Projekt Akiha.exe.config
+c:\Users\Setsuna\Documents\Visual Studio 2015\Projects\Projekt Akiha\Projekt Akiha\obj\Debug\Projekt Akiha.vbprojResolveAssemblyReference.cache
+c:\Users\Setsuna\Documents\Visual Studio 2015\Projects\Projekt Akiha\Projekt Akiha\obj\Debug\Projekt_Akiha.Resources.resources
+c:\Users\Setsuna\Documents\Visual Studio 2015\Projects\Projekt Akiha\Projekt Akiha\obj\Debug\Projekt Akiha.vbproj.GenerateResource.Cache
+c:\Users\Setsuna\Documents\Visual Studio 2015\Projects\Projekt Akiha\Projekt Akiha\obj\Debug\Projekt Akiha.xml
+c:\Users\Setsuna\Documents\Visual Studio 2015\Projects\Projekt Akiha\Projekt Akiha\bin\Debug\Projekt Akiha.exe
+c:\Users\Setsuna\Documents\Visual Studio 2015\Projects\Projekt Akiha\Projekt Akiha\bin\Debug\Projekt Akiha.pdb
+c:\Users\Setsuna\Documents\Visual Studio 2015\Projects\Projekt Akiha\Projekt Akiha\bin\Debug\Projekt Akiha.xml
+c:\Users\Setsuna\Documents\Visual Studio 2015\Projects\Projekt Akiha\Projekt Akiha\bin\Debug\System.Net.Http.dll
+c:\Users\Setsuna\Documents\Visual Studio 2015\Projects\Projekt Akiha\Projekt Akiha\bin\Debug\System.Net.Http.xml
+c:\Users\Setsuna\Documents\Visual Studio 2015\Projects\Projekt Akiha\Projekt Akiha\obj\Debug\Projekt Akiha.exe
+c:\Users\Setsuna\Documents\Visual Studio 2015\Projects\Projekt Akiha\Projekt Akiha\obj\Debug\Projekt Akiha.pdb
