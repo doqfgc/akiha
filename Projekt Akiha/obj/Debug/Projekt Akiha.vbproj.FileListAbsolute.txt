@@ -10,3 +10,13 @@ c:\Users\Setsuna\Documents\Visual Studio 2015\Projects\Projekt Akiha\Projekt Aki
 c:\Users\Setsuna\Documents\Visual Studio 2015\Projects\Projekt Akiha\Projekt Akiha\bin\Debug\System.Net.Http.xml
 c:\Users\Setsuna\Documents\Visual Studio 2015\Projects\Projekt Akiha\Projekt Akiha\obj\Debug\Projekt Akiha.exe
 c:\Users\Setsuna\Documents\Visual Studio 2015\Projects\Projekt Akiha\Projekt Akiha\obj\Debug\Projekt Akiha.pdb
+C:\Users\Kazusa\Documents\GitHub\akiha\Projekt Akiha\bin\Debug\Projekt Akiha.exe.config
+C:\Users\Kazusa\Documents\GitHub\akiha\Projekt Akiha\obj\Debug\Projekt Akiha.exe
+C:\Users\Kazusa\Documents\GitHub\akiha\Projekt Akiha\obj\Debug\Projekt Akiha.xml
+C:\Users\Kazusa\Documents\GitHub\akiha\Projekt Akiha\obj\Debug\Projekt Akiha.pdb
+C:\Users\Kazusa\Documents\GitHub\akiha\Projekt Akiha\bin\Debug\Projekt Akiha.exe
+C:\Users\Kazusa\Documents\GitHub\akiha\Projekt Akiha\bin\Debug\Projekt Akiha.pdb
+C:\Users\Kazusa\Documents\GitHub\akiha\Projekt Akiha\bin\Debug\Projekt Akiha.xml
+C:\Users\Kazusa\Documents\GitHub\akiha\Projekt Akiha\obj\Debug\Projekt Akiha.vbprojResolveAssemblyReference.cache
+C:\Users\Kazusa\Documents\GitHub\akiha\Projekt Akiha\obj\Debug\Projekt_Akiha.Resources.resources
+C:\Users\Kazusa\Documents\GitHub\akiha\Projekt Akiha\obj\Debug\Projekt Akiha.vbproj.GenerateResource.Cache

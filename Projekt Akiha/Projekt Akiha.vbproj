@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{EBBEC659-CE75-4418-B658-80F9CA410538}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <StartupObject>Projekt_Akiha.Module1</StartupObject>
+    <StartupObject>Projekt_Akiha.Akiha</StartupObject>
     <RootNamespace>Projekt_Akiha</RootNamespace>
     <AssemblyName>Projekt Akiha</AssemblyName>
     <FileAlignment>512</FileAlignment>
