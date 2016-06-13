@@ -9,17 +9,20 @@
 Module Akiha
 
     Sub Main(ByVal cmdArgs() As String)
-        Dim mtbver = "4.0"
+        Dim mtbver = "4.5"
+        Dim compiledate = "12 June 2016 23:37"
+        Dim mc = My.Computer
+        Dim nl = Environment.NewLine
         Console.SetWindowSize(80, 25)
         Console.SetBufferSize(80, 500)
         REM 012345678901234567890123456789012345678901234567890123457890123456789012345678901
-        Console.WriteLine(Environment.NewLine +
-"        __  ___    __          ______          ____              ____  ___" + Environment.NewLine +
-"       /  |/  /__ / /__ ___   /_  __/__  ___  / / /  ___ __ __  / / / / _ \" + Environment.NewLine +
-"      / /|_/ / -_) / -_) -_)   / / / _ \/ _ \/ / _ \/ _ \\ \ / /_  _// // /" + Environment.NewLine +
-"     /_/  /_/\__/_/\__/\__/   /_/  \___/\___/_/_.__/\___/_\_\   /_/(_)___/" + Environment.NewLine +
-"                           Melee Toolbox Extended " + mtbver + Environment.NewLine +
-"                                by Doqtor Kirby" + Environment.NewLine)
+        Console.WriteLine(nl +
+"        __  ___    __          ______          ____              ____   ____" + nl +
+"       /  |/  /__ / /__ ___   /_  __/__  ___  / / /  ___ __ __  / / /  / __/" + nl +
+"      / /|_/ / -_) / -_) -_)   / / / _ \/ _ \/ / _ \/ _ \\ \ / /_  _/ /__ \" + nl +
+"     /_/  /_/\__/_/\__/\__/   /_/  \___/\___/_/_.__/\___/_\_\   /_/(_)____/" + nl +
+"                           Melee Toolbox Extended " + mtbver + nl +
+"                                by Doqtor Kirby" + nl)
         If cmdArgs.Length > 0 Then
             For argNum As Integer = 0 To UBound(cmdArgs, 1)
                 REM Console.WriteLine("debug: " + cmdArgs(0) + " " + cmdArgs(1))
@@ -32,15 +35,16 @@ Module Akiha
                 End If
             Next
         Else
-            Console.WriteLine("  Syntax:" + Environment.NewLine +
-            "  mtbx [appname]" + Environment.NewLine +
-            "  mtbx -c [command]" + Environment.NewLine +
-            "  mtbx update [appname]" + Environment.NewLine + Environment.NewLine +
-            "  Application list:" + Environment.NewLine +
-            "  hps_insert ssmex hpsauto vgmstream meleehps meleessm dtw png2tpl toolkit" + Environment.NewLine +
-            "  toolbox texfind kirbytool vertconv umc mcm asmwiird crazyhand dolphin" + Environment.NewLine +
-            "  dolphindbg gcr hxd ssbmver neko efchg laschg thpplay mth_make" + Environment.NewLine + Environment.NewLine +
-            "  Toolbox Commands:" + Environment.NewLine + Environment.NewLine +
+            Console.WriteLine("  Syntax:" + nl +
+            "  mtbx [appname]" + nl +
+            "  mtbx -c [command]" + nl +
+            "  mtbx update [appname]" + nl + nl +
+            "  Application list:" + nl +
+            "  hps_insert ssmex hpsauto vgmstream meleehps meleessm dtw png2tpl toolkit" + nl +
+            "  toolbox texfind kirbytool vertconv umc mcm asmwiird crazyhand dolphin" + nl +
+            "  dolphindbg gcr hxd ssbmver neko efchg laschg thpplay mth_make 20xxmm mac" + nl +
+            "  d2hgui" + nl + nl +
+            "  Toolbox Commands:" + nl + nl +
             "  ver version github copyright license")
             End
         End If
@@ -133,7 +137,7 @@ Applaunch:
         ElseIf cmdArgs(0) = "crazyhand" Then
             On Error GoTo appnotfound
             Console.WriteLine("  Launching Crazy Hand...")
-            Process.Start("lib\chand\CHAND.jar")
+            Process.Start("lib\chand\CHAND.bat")
             End
         ElseIf cmdArgs(0) = "dolphin" Then
             On Error GoTo appnotfound
@@ -167,7 +171,7 @@ Applaunch:
             End
         ElseIf cmdArgs(0) = "neko" Then
             On Error GoTo appnotfound
-            Console.WriteLine("  Melee Toolbox 4.0 does not support any version of Projekt Neko." + Environment.NewLine +
+            Console.WriteLine("  Melee Toolbox 4.0 does not support any version of Projekt Neko." + nl +
                               "  See 'mtbx len' for Projekt Neko's replacement [Projekt Len].")
             REM Process.Start("lib\pn.exe")
             End
@@ -206,13 +210,61 @@ Applaunch:
             Console.WriteLine("  Launching mth_make...")
             Process.Start("lib\mth_make.bat")
             End
-        Else
+        ElseIf cmdArgs(0) = "20xxmm" Then
+            On Error GoTo appnotfound
+            Console.WriteLine("  Launching 20XX Music Manager...")
+            Process.Start("lib\20xxmm\20XX Music Manager.jar")
+            End
+        ElseIf cmdArgs(0) = "len" Then
+            On Error GoTo appnotfound
+            Console.WriteLine("  Launching Projekt Len...")
+            Process.Start("lib\len\Projekt Len.exe")
+            End
+        ElseIf cmdArgs(0) = "mac" Then
+            On Error GoTo appnotfound
+            Console.WriteLine("  Launching Melee Audio Converter...")
+            Process.Start("lib\Melee Audio Converter.jar")
+            End
+        ElseIf cmdArgs(0) = "d2hgui" Then
+            On Error GoTo appnotfound
+            Console.WriteLine("  Launching d2hgui...")
+            Process.Start("lib\d2hgui.exe")
+            End
+            Else
             Console.WriteLine("  Didn't understand that. For a commands list, type 'mtbx'.")
             End
         End If
         End
 appupdate:
-        Console.WriteLine("  Updating coming in later build.")
+        For argNum As Integer = 0 To UBound(cmdArgs, 1)
+            On Error GoTo updatewhat
+            REM Console.WriteLine("debug: " + cmdArgs(0) + " " + cmdArgs(1))
+            Dim mtbapp As String = cmdArgs(1)
+            If cmdArgs(1) IsNot Nothing Then
+                On Error GoTo updatefail
+                Console.WriteLine("  Updating " + mtbapp + "...")
+                mc.Network.DownloadFile("http://portland.refreshnet.co.uk/toolbox/" + mtbapp + ".7z", "dl\" + mtbapp + ".7z")
+                Using mtbupdate As New Process
+                    mtbupdate.StartInfo.Arguments = "x -aoa -y dl\" + mtbapp + ".7z"
+                    mtbupdate.StartInfo.FileName = "\lib\7z.exe"
+                    mtbupdate.Start()
+                    mtbupdate.WaitForExit()
+                End Using
+                mc.FileSystem.DeleteFile("dl\hps_insert.7z")
+                Console.WriteLine("  Done.")
+                End
+            End If
+            If cmdArgs(1) Is Nothing Then
+updatewhat:
+                Console.WriteLine("  Update what? (you didn't specify an app)")
+                End
+            End If
+            End
+        Next
+        End
+updatefail:
+        Console.WriteLine("  Application '" + cmdArgs(1) + "' couldn't be downloaded. Check your internet connection " + nl +
+                          "  and command spelling.")
         End
 appnotfound:
         Console.WriteLine("  Application " + cmdArgs(0) + " not found. Try running 'mtbx update " + cmdArgs(0) + "'.")
@@ -221,10 +273,10 @@ mtbcommands:
         For argNum As Integer = 0 To UBound(cmdArgs, 1)
             REM Console.WriteLine("debug: " + cmdArgs(0) + " " + cmdArgs(1))
             If cmdArgs(1) = "version" Then
-                Console.WriteLine("  This is version " + mtbver + ", compiled on " + DateString + " " + TimeString)
+                Console.WriteLine("  This is version " + mtbver + ", compiled on " + compiledate)
                 End
             ElseIf cmdArgs(1) = "ver" Then
-                Console.WriteLine("  This is version " + mtbver + ", compiled on " + DateString + " " + TimeString)
+                Console.WriteLine("  This is version " + mtbver + ", compiled on " + compiledate)
                 End
             ElseIf cmdArgs(1) = "github" Then
                 Console.WriteLine("  GitHub: http://www.github.com/doqtorkirby/akiha")

@@ -1,0 +1,9 @@
+C:\Users\Kazusa\Documents\GitHub\akiha\Projekt Akiha\bin\Release\Melee Toolbox Extended.exe.config
+C:\Users\Kazusa\Documents\GitHub\akiha\Projekt Akiha\bin\Release\Melee Toolbox Extended.exe
+C:\Users\Kazusa\Documents\GitHub\akiha\Projekt Akiha\bin\Release\Melee Toolbox Extended.pdb
+C:\Users\Kazusa\Documents\GitHub\akiha\Projekt Akiha\bin\Release\Melee Toolbox Extended.xml
+C:\Users\Kazusa\Documents\GitHub\akiha\Projekt Akiha\obj\Release\mtbx.Resources.resources
+C:\Users\Kazusa\Documents\GitHub\akiha\Projekt Akiha\obj\Release\Projekt Akiha.vbproj.GenerateResource.Cache
+C:\Users\Kazusa\Documents\GitHub\akiha\Projekt Akiha\obj\Release\Melee Toolbox Extended.exe
+C:\Users\Kazusa\Documents\GitHub\akiha\Projekt Akiha\obj\Release\Melee Toolbox Extended.xml
+C:\Users\Kazusa\Documents\GitHub\akiha\Projekt Akiha\obj\Release\Melee Toolbox Extended.pdb
